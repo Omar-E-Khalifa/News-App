@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myten_om_news_khara/models/category_model.dart';
+import 'package:news_app/models/category_model.dart';
 
 class Category extends StatelessWidget {
   const Category({super.key, required this.item, required this.onTap});

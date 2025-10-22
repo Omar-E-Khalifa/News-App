@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myten_om_news_khara/widgets/news_ListView_builder.dart';
+import 'package:news_app/widgets/news_ListView_builder.dart';
 
 class CategoryView extends StatelessWidget {
   const CategoryView({super.key, required this.category});

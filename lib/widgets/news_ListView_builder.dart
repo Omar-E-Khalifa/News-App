@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:myten_om_news_khara/models/article_model.dart';
-import 'package:myten_om_news_khara/services/news_service.dart';
-import 'package:myten_om_news_khara/widgets/loading_circle.dart';
-import 'package:myten_om_news_khara/widgets/news_ListView.dart';
+import 'package:news_app/models/article_model.dart';
+import 'package:news_app/services/news_service.dart';
+import 'package:news_app/widgets/loading_circle.dart';
+import 'package:news_app/widgets/news_ListView.dart';
 
 class NewsListViewBuilder extends StatefulWidget {
   const NewsListViewBuilder({super.key, required this.category});

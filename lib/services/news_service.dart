@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:myten_om_news_khara/models/article_model.dart';
+import 'package:news_app/models/article_model.dart';
 
 class NewsService {
   final Dio dio;

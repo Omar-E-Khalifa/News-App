@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myten_om_news_khara/models/category_model.dart';
-import 'package:myten_om_news_khara/widgets/categories_ListView.dart';
-import 'package:myten_om_news_khara/widgets/news_ListView_builder.dart';
+import 'package:news_app/models/category_model.dart';
+import 'package:news_app/widgets/categories_ListView.dart';
+import 'package:news_app/widgets/news_ListView_builder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:myten_om_news_khara/views/home_view.dart';
+import 'package:news_app/views/home_view.dart';
 
 void main() {
   runApp(const MyApp());

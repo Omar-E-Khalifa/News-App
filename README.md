@@ -55,3 +55,4 @@ The project includes a hardcoded API key for [newsapi.org](https://newsapi.org) 
 
 **Omar E. Khalifa**
 * GitHub: [@Omar-E-Khalifa](https://github.com/Omar-E-Khalifa)
+
