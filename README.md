@@ -3,6 +3,11 @@
 A sleek and modern news aggregator application built with Flutter. It provides users with the latest articles from [newsapi.org](https://newsapi.org), sorted across various categories like Business, Technology, and Sports.
 
 ## 📸 Screenshots
+![6037435236389424120](https://github.com/user-attachments/assets/c4f192fa-ca04-4a64-92db-cbac8d9ba7d9)
+
+![6037435236389424121](https://github.com/user-attachments/assets/fe4e4538-4b68-4780-b831-0f99f69f9333)
+
+![6037435236389424122](https://github.com/user-attachments/assets/47b98ebb-3bc9-4a7f-be47-28fafa82974b)
 
 
 ## ✨ Features
