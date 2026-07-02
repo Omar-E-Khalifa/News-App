@@ -1,63 +1,73 @@
 # NewsCloud ☁️
 
-A sleek and modern news aggregator application built with Flutter. It provides users with the latest articles from [newsapi.org](https://newsapi.org), sorted across various categories like Business, Technology, and Sports.
+A Flutter news aggregator that pulls live top headlines from [newsapi.org](https://newsapi.org), browsable by category, with a clean card-based feed.
 
-## 📸 Screenshots
-![6037435236389424120](https://github.com/user-attachments/assets/c4f192fa-ca04-4a64-92db-cbac8d9ba7d9)
+## Demo
 
-![6037435236389424121](https://github.com/user-attachments/assets/fe4e4538-4b68-4780-b831-0f99f69f9333)
+![Demo](docs/images/demo.gif)
 
-![6037435236389424122](https://github.com/user-attachments/assets/47b98ebb-3bc9-4a7f-be47-28fafa82974b)
+## Screenshots
 
+| Main View | Article Fallback Image |
+|---|---|
+| ![Main view](docs/images/main_view.jpg) | ![Placeholder image state](docs/images/placeholder_image_news.jpg) |
 
-## ✨ Features
+## Features
 
-* **Categorized News:** Browse top headlines from categories like Business, Technology, and Sports.
-* **Tabbed Navigation:** Easily swipe between news categories.
-* **In-App Article Reading:** Opens full articles in a `WebView` without leaving the app.
-* **Clean UI:** A simple, card-based layout for a great user experience.
+- **Live headlines** fetched from newsapi.org, sorted by category (Business, Entertainment, Health, Science, Technology, Sports)
+- **Category browsing** — a horizontal scrollable list of categories; tapping one opens a filtered headline feed for that category
+- **Card-based feed** — each article card shows its image, title, subtitle, and author
+- **Graceful fallback image** for articles with no image URL, instead of a broken/blank card
+- **Loading and error states** handled explicitly while headlines are fetched
 
+## Tech Stack
 
-## 🛠️ Tech Stack & Key Packages
+- **Flutter** — cross-platform UI toolkit, `CustomScrollView`/slivers for the feed
+- **dio** — HTTP client for the newsapi.org integration
+- **newsapi.org** — live news data source
 
-* **Framework:** [Flutter](https://flutter.dev/)
-* **Language:** [Dart](https://dart.dev/)
-* **API Client:** [`dio`](https://pub.dev/packages/dio) - For making HTTP requests to the News API.
+## Project Structure
 
-## 🚀 Getting Started
+```
+lib/
+├── models/            # ArticleModel, CategoryModel
+├── services/           # NewsService (API calls)
+├── views/               # HomeView, CategoryView
+├── widgets/               # NewsCard, NewsListView, NewsListViewBuilder,
+│                             CategoriesListView, Category, LoadingCircle
+└── main.dart
+```
 
-To get a local copy up and running, follow these simple steps.
+## Getting Started
 
-### Prerequisites
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/Omar-E-Khalifa/News-App.git
+   cd News-App
+   ```
 
-* You must have the Flutter SDK installed. [Installation Guide](https://flutter.dev/docs/get-started/install)
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
 
-### Installation
+3. **Add your API key**
+   Create a `secrets.json` file in the project root (this file is git-ignored):
+   ```json
+   { "NEWS_API_KEY": "your-newsapi.org-key" }
+   ```
+   Get a free key at [newsapi.org](https://newsapi.org/).
 
-1.  **Clone the repo**
-    ```sh
-    git clone [https://github.com/Omar-E-Khalifa/News-App.git](https://github.com/Omar-E-Khalifa/News-App.git)
-    ```
+4. **Run the app**
+   ```bash
+   flutter run --dart-define-from-file=secrets.json
+   ```
 
-2.  **Navigate to the project directory**
-    ```sh
-    cd News-App
-    ```
+## Roadmap
 
-3.  **Install dependencies**
-    ```sh
-    flutter pub get
-    ```
+- Add a full article detail view (in-app WebView or reader view) — currently tapping an article card does nothing
+- Pull-to-refresh on the feed
 
-4.  **Run the app**
-    ```sh
-    flutter run
-    ```
+## Author
 
-The project includes a hardcoded API key for [newsapi.org](https://newsapi.org) for demonstration purposes, so it will run out of the box.
-
-## 👤 Author
-
-**Omar E. Khalifa**
-* GitHub: [@Omar-E-Khalifa](https://github.com/Omar-E-Khalifa)
-
+Built by [Omar Essam](https://github.com/Omar-E-Khalifa) as part of a self-directed Flutter learning journey.
